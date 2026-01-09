@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">TiketKu</h1>
+    <div class="flex items-center gap-4">
+      <span class="text-gray-600 hidden sm:block">Halo, User</span>
+      <a href="../index.html" class="text-red-500 hover:underline">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+  <h2 class="text-2xl font-bold mb-6">Event Tersedia</h2>
+
+  <!-- EVENT GRID -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+     <!-- CARD -->
+    <!-- <div class="card">
+        <img src="https://picsum.photos/400/200" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="card-title">Konser Musik A</h3>
+        <p class="text-gray-500 text-sm mb-4">Jakarta • 20 Juni 2026</p>
+        <a href="event-detail.html" class="btn-danger block text-center">
+            Pesan Tiket
+        </a>
+    </div> -->
+
+
+    <!-- DUPLIKASI CARD -->
+    <!-- <div class="card">
+        <img src="https://picsum.photos/401/200" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="card-title">Konser Musik B</h3>
+        <p class="text-gray-500 text-sm mb-4">Jakarta • 27 Juni 2026</p>
+        <a href="event-detail.html" class="btn-danger block text-center">
+            Pesan Tiket
+        </a>
+    </div> -->
+    <div id="event-list" class="grid md:grid-cols-3 gap-6"></div>
+    <script type="module" src="../src/js/app.js"></script>
+
+  </div>
+</main>
+
+</body>
+</html>
