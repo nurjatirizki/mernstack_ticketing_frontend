@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- TOPBAR MOBILE -->
+<header class="bg-white shadow p-4 flex justify-between items-center md:hidden">
+  <h1 class="font-bold text-lg">Admin Panel</h1>
+  <button id="btnMenu" class="text-2xl">☰</button>
+</header>
+
+<div class="md:flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside
+    id="sidebar"
+    class="fixed md:static inset-y-0 left-0 w-64 bg-blue-600 text-white p-6
+           transform -translate-x-full md:translate-x-0
+           transition-transform duration-300 z-50"
+  >
+    <h2 class="text-2xl font-bold mb-8">ADMIN</h2>
+
+    <nav class="space-y-4">
+      <a href="dashboard.html" class="block hover:bg-blue-700 p-2 rounded">Dashboard</a>
+      <a href="events.html" class="block hover:bg-blue-700 p-2 rounded">Event</a>
+      <a href="#" class="block hover:bg-blue-700 p-2 rounded">Pesanan</a>
+      <a href="../index.html" class="block hover:bg-red-500 p-2 rounded">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- OVERLAY -->
+  <div
+    id="overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden md:hidden z-40">
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold mb-6 hidden md:block">Dashboard</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-500">Total Event</p>
+        <p class="text-3xl font-bold">12</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-500">Total Pesanan</p>
+        <p class="text-3xl font-bold">85</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-500">Pendapatan</p>
+        <p class="text-3xl font-bold">Rp 12.500.000</p>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<!-- JS -->
+<script>
+  const btnMenu = document.getElementById('btnMenu')
+  const sidebar = document.getElementById('sidebar')
+  const overlay = document.getElementById('overlay')
+
+  btnMenu.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full')
+    overlay.classList.toggle('hidden')
+  })
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full')
+    overlay.classList.add('hidden')
+  })
+</script>
+
+</body>
+</html>
